@@ -26,7 +26,7 @@ import {
   SubList,
 } from './style';
 
-const leftNavBg = 'leftnav-bg.svg';
+const leftNavBg = 'leftNav-bg.svg';
 
 function LeftNavPc({ newNavData, moreActive }) {
   const [isOpen, setIsOpen] = useState(true); // 左選開關
