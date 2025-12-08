@@ -54,7 +54,7 @@ function App() {
       {/* ============ Main ============ */}
 
       <div id="pd1" data-title="aaa" className="h-[500px]">
-        aaa
+        5a連招
       </div>
       <div id="pd2" data-title="bbb" className="h-[500px]">
         bbb
@@ -65,7 +65,7 @@ function App() {
       <div id="pd4" data-title="ddd" className="h-[500px]">
         ddd
       </div>
-      <Onsale />
+      {/* <Onsale /> */}
       {/* ============ End Main ============ */}
       <Footer hasLeftNav={hasLeftNav} />
     </div>
