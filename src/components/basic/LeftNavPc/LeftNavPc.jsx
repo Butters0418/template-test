@@ -26,6 +26,8 @@ import {
   SubList,
 } from './style';
 
+const leftNavBg = 'leftnav-bg.svg';
+
 function LeftNavPc({ newNavData, moreActive }) {
   const [isOpen, setIsOpen] = useState(true); // 左選開關
   const [isScrollTop, setIsScrollTop] = useState(false); // 是否上滑
@@ -80,7 +82,7 @@ function LeftNavPc({ newNavData, moreActive }) {
         {/* 選單 */}
         <ListWrap
           style={{
-            backgroundImage: `url(${nominifyLeftnavBg})`,
+            backgroundImage: `url(./${leftNavBg})`,
           }}
         >
           {/* 額外活動 */}
