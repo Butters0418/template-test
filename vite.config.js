@@ -8,7 +8,7 @@ const todayString = dayjs().format('YYYYMMDDHHmm');
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './', // 使用相對路徑以免拉拉熊找不到圖機
+  base: '/', // 使用相對路徑以免拉拉熊找不到圖機
   plugins: [
     react({
       babel: {
