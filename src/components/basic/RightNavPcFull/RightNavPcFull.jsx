@@ -61,7 +61,7 @@ function RightNavFullPc({ hashContainer, currentContainer, sticky }) {
                 highlightColor="#ffe1cc"
               />
             ) : (
-              <a target="_blank" href={sticky[0].url}>
+              <a href={sticky[0].url}>
                 <img
                   alt="活動總覽"
                   src={sticky[0].imgSrc}

@@ -58,7 +58,7 @@ function Header2() {
                 alt="icon Instagram"
               />
             </a>
-            <a href="" target="_blank">
+            <a href="">
               <img
                 src={iconYtWhiteFill}
                 className="h-[28px] w-[28px] hover:opacity-75"

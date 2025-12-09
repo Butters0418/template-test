@@ -67,7 +67,7 @@ function LeftNavPc({ newNavData, moreActive }) {
       </SButton>
       <SListContainer isOpen={isOpen}>
         {/* 貼紙 */}
-        <SSticker href={newNavData.stickerImg.url} target="_blank">
+        <SSticker href={newNavData.stickerImg.url}>
           <img
             src={
               newNavData.stickerImg.imgSrc
@@ -97,7 +97,7 @@ function LeftNavPc({ newNavData, moreActive }) {
               />
             ) : (
               moreActive.map((item, index) => (
-                <a key={index} href={item.url} target="_blank">
+                <a key={index} href={item.url}>
                   {item.productName}
                 </a>
               ))
@@ -125,9 +125,7 @@ function LeftNavPc({ newNavData, moreActive }) {
                 .map((item, index) => {
                   return (
                     <li key={index}>
-                      <a href={item.url} target="_blank">
-                        {item.text}
-                      </a>
+                      <a href={item.url}>{item.text}</a>
                     </li>
                   );
                 })
