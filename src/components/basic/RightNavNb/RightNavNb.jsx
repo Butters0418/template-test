@@ -14,12 +14,12 @@ import scrollToElement from '../../../utils/scrollToElement';
 
 // style
 import {
-  NavContainer,
-  Button,
-  ListContainer,
-  ListUl,
-  HashLink,
-  BackTopBtn,
+  SNavContainer,
+  SButton,
+  SListContainer,
+  SListUl,
+  SHashLink,
+  SBackTopBtn,
 } from './style';
 
 // custom hooks
@@ -47,8 +47,8 @@ function RightNavPc({ hashContainer, currentContainer, sticky }) {
     }
   }, [scroll]);
   return (
-    <NavContainer isOpen={isOpen} isScrollTop={isScrollTop}>
-      <Button
+    <SNavContainer isOpen={isOpen} isScrollTop={isScrollTop}>
+      <SButton
         aria-label="toggle right nav"
         isOpen={isOpen}
         onClick={() => {
@@ -58,13 +58,13 @@ function RightNavPc({ hashContainer, currentContainer, sticky }) {
         <IoIosArrowForward
           className={`h-7 w-7 text-white ${!isOpen && 'rotate-180'}`}
         />
-      </Button>
-      <ListContainer isOpen={isOpen}>
-        <ListUl>
+      </SButton>
+      <SListContainer isOpen={isOpen}>
+        <SListUl>
           {hashContainer.map((item) => {
             const isActive = item.id === currentContainer;
             return (
-              <HashLink key={item.id} isActive={isActive}>
+              <SHashLink key={item.id} isActive={isActive}>
                 <button
                   onClick={() => {
                     scrollToElement(item.id);
@@ -72,7 +72,7 @@ function RightNavPc({ hashContainer, currentContainer, sticky }) {
                 >
                   {item.dataset.title}
                 </button>
-              </HashLink>
+              </SHashLink>
             );
           })}
           <li>
@@ -92,17 +92,17 @@ function RightNavPc({ hashContainer, currentContainer, sticky }) {
               </a>
             )}
           </li>
-        </ListUl>
-        <BackTopBtn
+        </SListUl>
+        <SBackTopBtn
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <span>
             <IoIosArrowUp className="h-5 w-5" />
             GO TOP
           </span>
-        </BackTopBtn>
-      </ListContainer>
-    </NavContainer>
+        </SBackTopBtn>
+      </SListContainer>
+    </SNavContainer>
   );
 }
 

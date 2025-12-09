@@ -1,17 +1,17 @@
 // 桌機右選(滿版)
 import tw, { styled } from 'twin.macro';
 
-export const NavContainer = styled.div`
+export const SNavContainer = styled.div`
   ${tw`fixed z-50 top-0 bottom-0 right-0 w-[120px] p-[5px] bg-rightNavBg`}
 `;
 
 // 選單內容 (列表+按鈕)
-export const FlexContainer = styled.div`
+export const SFlexContainer = styled.div`
   ${tw`flex h-full flex-col items-center justify-center duration-300`}
 `;
 
 // 選單列表
-export const ListUl = styled.ul`
+export const SListUl = styled.ul`
   ${tw`text-center`}
   li:nth-last-of-type(1) {
     ${tw`mt-3`}
@@ -28,7 +28,7 @@ export const ListUl = styled.ul`
 `;
 
 // 各錨點按鈕
-export const HashLink = styled.li`
+export const SHashLink = styled.li`
   button {
     ${tw`relative flex justify-center items-center flex-wrap w-full py-2 text-[15px] font-medium  leading-[1.2] after:block duration-100 whitespace-nowrap`}
     ${tw`after:(mx-auto mt-3 w-16 h-[1px] bg-rightNavText)`}
@@ -44,7 +44,7 @@ export const HashLink = styled.li`
 `;
 
 // 回上方按鈕
-export const BackTopBtn = styled.button`
+export const SBackTopBtn = styled.button`
   ${tw`mt-[7vh] block w-full`}
   ${tw`2xl:(mt-[14vh])`}
   span {

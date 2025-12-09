@@ -1,7 +1,7 @@
 // footer nav mb
 import tw, { styled } from 'twin.macro';
 
-export const NavContainer = styled.div`
+export const SNavContainer = styled.div`
   ${tw`fixed bottom-0 left-0 right-0 z-[80] block`}
   ${tw`md:(hidden)`}
   ${tw`before:(fixed top-0 left-0 right-0 bottom-0 z-[99] bg-black bg-opacity-70)`}
@@ -13,10 +13,10 @@ export const NavContainer = styled.div`
 `;
 
 // 底部按鈕
-export const NavBtn = styled.button``;
+export const SNavBtn = styled.button``;
 
 // 按鈕 icon
-export const NavIcon = styled.p`
+export const SNavIcon = styled.p`
   ${tw`flex flex-col items-center justify-center text-white`}
   img {
     ${tw`h-[48px] w-[48px]`}
@@ -27,19 +27,19 @@ export const NavIcon = styled.p`
 `;
 
 // 收合面版
-export const Board = styled.div`
+export const SBoard = styled.div`
   ${tw`fixed bottom-0 left-0 right-0 z-[999]`}
 `;
 
 // 選單 container
-export const ListContainer = styled.div`
+export const SListContainer = styled.div`
   ${tw`absolute bottom-0 left-0 z-[90] w-full translate-y-full`}
   ${tw`pt-[40px] pb-[78px] px-[24px] space-y-5`}
   background: linear-gradient(360deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
 `;
 
 // 面版關閉按鈕
-export const BtnClose = styled.div`
+export const SBtnClose = styled.div`
   ${tw`flex flex-col items-center gap-1.5 text-center text-white`}
   span {
     ${tw`font-semibold font-montserrat text-xs`}
@@ -47,7 +47,7 @@ export const BtnClose = styled.div`
 `;
 
 // 分會場選單 ul
-export const ListUl = styled.ul`
+export const SListUl = styled.ul`
   ${tw`flex w-full flex-wrap justify-center opacity-0 translate-y-[20%]`}
   li {
     ${tw`mb-4 w-1/3 px-[10px]`}

@@ -11,13 +11,13 @@ import { footerMenu, footerGoTop } from '../../../assets/base';
 
 // style
 import {
-  NavContainer,
-  NavBtn,
-  NavIcon,
-  Board,
-  BtnClose,
-  ListContainer,
-  ListUl,
+  SNavContainer,
+  SNavBtn,
+  SNavIcon,
+  SBoard,
+  SBtnClose,
+  SListContainer,
+  SListUl,
 } from './style';
 
 // register useGSAP
@@ -48,56 +48,56 @@ function FooterNavMb({ newNavData, moreActive }) {
   );
 
   return (
-    <NavContainer isOpen={isBoardOpen} ref={container}>
+    <SNavContainer isOpen={isBoardOpen} ref={container}>
       {/* 按鈕區 */}
       <div className="footer__container">
         <div className="flex h-full justify-evenly">
           {/* 額外活動 */}
           {moreActive.length !== 0 &&
             moreActive.map((item, index) => (
-              <NavBtn as="a" href={item.url} key={index}>
-                <NavIcon>
+              <SNavBtn as="a" href={item.url} key={index}>
+                <SNavIcon>
                   <img
                     src={item.imgSrc}
                     alt={item.productName}
                     className="rounded-full"
                   />
                   <span>{item.productName}</span>
-                </NavIcon>
-              </NavBtn>
+                </SNavIcon>
+              </SNavBtn>
             ))}
 
           {/* 分會場按鈕 */}
-          <NavBtn type="button" onClick={toggleTimeline}>
-            <NavIcon>
+          <SNavBtn type="button" onClick={toggleTimeline}>
+            <SNavIcon>
               <img src={footerMenu} alt="分會場" />
               <span>分會場</span>
-            </NavIcon>
-          </NavBtn>
+            </SNavIcon>
+          </SNavBtn>
 
           {/* 回上方按鈕 */}
-          <NavBtn
+          <SNavBtn
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <NavIcon>
+            <SNavIcon>
               <img src={footerGoTop} alt="back to top" />
               <span>TOP</span>
-            </NavIcon>
-          </NavBtn>
+            </SNavIcon>
+          </SNavBtn>
         </div>
       </div>
 
       {/* 收合面版 分會場 */}
-      <Board>
-        <ListContainer className="list__container">
+      <SBoard>
+        <SListContainer className="list__container">
           {/* 關閉按鈕 */}
-          <BtnClose onClick={toggleTimeline}>
+          <SBtnClose onClick={toggleTimeline}>
             <IoIosCloseCircleOutline className="h-8 w-8" />
             <span>CLOSE</span>
-          </BtnClose>
+          </SBtnClose>
           {/* 分會場列表 */}
-          <ListUl className="list__ul">
+          <SListUl className="list__ul">
             {newNavData.otherLink.map((item, index) => {
               return (
                 <li key={index}>
@@ -105,10 +105,10 @@ function FooterNavMb({ newNavData, moreActive }) {
                 </li>
               );
             })}
-          </ListUl>
-        </ListContainer>
-      </Board>
-    </NavContainer>
+          </SListUl>
+        </SListContainer>
+      </SBoard>
+    </SNavContainer>
   );
 }
 

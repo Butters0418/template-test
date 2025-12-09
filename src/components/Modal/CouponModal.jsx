@@ -18,7 +18,7 @@ import { IoCloseOutline } from 'react-icons/io5';
 import { nominifyCouponGetSuccess } from '../../assets/layout';
 
 // style
-const MyDialog = styled(Dialog)`
+const SMyDialog = styled(Dialog)`
   // 燈箱外層
   .MuiPaper-root {
     ${tw`rounded-lg bg-white w-[90vw]`}
@@ -38,7 +38,7 @@ const MyDialog = styled(Dialog)`
 function CouponModal({ modalState, handleClose }) {
   return (
     <div className="container mx-auto p-5 text-center">
-      <MyDialog open={modalState} onClose={handleClose}>
+      <SMyDialog open={modalState} onClose={handleClose}>
         <DialogContent className="text-center">
           <div className="text-right">
             <IconButton
@@ -52,12 +52,12 @@ function CouponModal({ modalState, handleClose }) {
           </div>
           <div className="flex flex-grow flex-col items-center justify-center">
             {/* 圖片網址中加上時間戳，讓每次開啟燈箱都加重複加載 */}
-            <div className="sm:w-[140px] w-2/5">
+            <div className="w-2/5 sm:w-[140px]">
               <div className="aspect-1">
                 <img
                   src={`${nominifyCouponGetSuccess}?time=${new Date().getTime()}`}
                   alt="coupon-get-success"
-                  className='w-full'
+                  className="w-full"
                 />
               </div>
             </div>
@@ -71,7 +71,7 @@ function CouponModal({ modalState, handleClose }) {
             </Button>
           </div>
         </DialogContent>
-      </MyDialog>
+      </SMyDialog>
     </div>
   );
 }

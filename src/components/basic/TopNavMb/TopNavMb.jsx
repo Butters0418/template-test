@@ -9,7 +9,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import scrollToElement from '../../../utils/scrollToElement';
 
 // style
-import { NavContainer, ListContainer, HashLink } from './style';
+import { SNavContainer, SListContainer, SHashLink } from './style';
 
 function TopNavMb({ hashContainer, currentContainer }) {
   const ul = useRef(null); // 選單本身
@@ -24,7 +24,7 @@ function TopNavMb({ hashContainer, currentContainer }) {
     }
   }, [currentContainer]);
   return (
-    <NavContainer className="no-scrollbar" ref={ul}>
+    <SNavContainer className="no-scrollbar" ref={ul}>
       {hashContainer.length == 0 ? (
         <Skeleton
           count={3}
@@ -32,10 +32,10 @@ function TopNavMb({ hashContainer, currentContainer }) {
           containerClassName="p-1 flex justify-center gap-x-2 item-center h-full"
         />
       ) : (
-        <ListContainer>
+        <SListContainer>
           {hashContainer.map((item) => {
             return (
-              <HashLink key={item.id} data-topnav={item.id}>
+              <SHashLink key={item.id} data-topnav={item.id}>
                 <button
                   className={` ${
                     currentContainer === item.id
@@ -48,12 +48,12 @@ function TopNavMb({ hashContainer, currentContainer }) {
                 >
                   {item.dataset.title}
                 </button>
-              </HashLink>
+              </SHashLink>
             );
           })}
-        </ListContainer>
+        </SListContainer>
       )}
-    </NavContainer>
+    </SNavContainer>
   );
 }
 

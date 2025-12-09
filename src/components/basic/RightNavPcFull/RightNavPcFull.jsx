@@ -13,18 +13,18 @@ import { rightNavAnchor } from '../../../assets/base';
 
 // style
 import {
-  NavContainer,
-  FlexContainer,
-  BackTopBtn,
-  ListUl,
-  HashLink,
+  SNavContainer,
+  SFlexContainer,
+  SBackTopBtn,
+  SListUl,
+  SHashLink,
 } from './style';
 
 function RightNavFullPc({ hashContainer, currentContainer, sticky }) {
   return (
-    <NavContainer>
-      <FlexContainer>
-        <ListUl>
+    <SNavContainer>
+      <SFlexContainer>
+        <SListUl>
           {hashContainer.length == 0 ? (
             <Skeleton
               count={4}
@@ -37,7 +37,7 @@ function RightNavFullPc({ hashContainer, currentContainer, sticky }) {
             hashContainer.map((item) => {
               const isActive = item.id === currentContainer;
               return (
-                <HashLink key={item.id} isActive={isActive}>
+                <SHashLink key={item.id} isActive={isActive}>
                   <button
                     onClick={() => {
                       scrollToElement(item.id);
@@ -48,7 +48,7 @@ function RightNavFullPc({ hashContainer, currentContainer, sticky }) {
                       {item.dataset.title}
                     </p>
                   </button>
-                </HashLink>
+                </SHashLink>
               );
             })
           )}
@@ -70,19 +70,19 @@ function RightNavFullPc({ hashContainer, currentContainer, sticky }) {
               </a>
             )}
           </li>
-        </ListUl>
+        </SListUl>
 
         {/* back to top */}
-        <BackTopBtn
+        <SBackTopBtn
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <span>
             <IoIosArrowUp className="h-5 w-5" />
             GO TOP
           </span>
-        </BackTopBtn>
-      </FlexContainer>
-    </NavContainer>
+        </SBackTopBtn>
+      </SFlexContainer>
+    </SNavContainer>
   );
 }
 

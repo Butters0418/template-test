@@ -5,7 +5,7 @@ function Onsale() {
 
   useEffect(() => {
     getData();
-  }, [getData]);
+  }, []);
 
   console.log('onsaleData', onsaleData);
 

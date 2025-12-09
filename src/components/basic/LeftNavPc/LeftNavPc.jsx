@@ -16,14 +16,14 @@ import { nominifyLeftnavBg } from '../../../assets/layout';
 
 // style
 import {
-  NavContainer,
-  Button,
-  ListContainer,
-  Sticker,
-  ListWrap,
-  TopList,
-  MainList,
-  SubList,
+  SNavContainer,
+  SButton,
+  SListContainer,
+  SSticker,
+  SListWrap,
+  STopList,
+  SMainList,
+  SSubList,
 } from './style';
 
 const leftNavBg = 'leftNav-bg.svg';
@@ -53,8 +53,8 @@ function LeftNavPc({ newNavData, moreActive }) {
   }, [scroll]);
 
   return (
-    <NavContainer isOpen={isOpen} isScrollTop={isScrollTop}>
-      <Button
+    <SNavContainer isOpen={isOpen} isScrollTop={isScrollTop}>
+      <SButton
         isOpen={isOpen}
         onClick={() => {
           setIsOpen((prev) => !prev);
@@ -64,10 +64,10 @@ function LeftNavPc({ newNavData, moreActive }) {
         <IoIosArrowForward
           className={`h-7 w-7 text-white ${isOpen && 'rotate-180'}`}
         />
-      </Button>
-      <ListContainer isOpen={isOpen}>
+      </SButton>
+      <SListContainer isOpen={isOpen}>
         {/* 貼紙 */}
-        <Sticker href={newNavData.stickerImg.url} target="_blank">
+        <SSticker href={newNavData.stickerImg.url} target="_blank">
           <img
             src={
               newNavData.stickerImg.imgSrc
@@ -77,16 +77,16 @@ function LeftNavPc({ newNavData, moreActive }) {
             className="h-[120px] w-[120px]"
             alt="主會場"
           />
-        </Sticker>
+        </SSticker>
 
         {/* 選單 */}
-        <ListWrap
+        <SListWrap
           style={{
             backgroundImage: `url(./${leftNavBg})`,
           }}
         >
           {/* 額外活動 */}
-          <TopList>
+          <STopList>
             {moreActive.length === 0 ? (
               <Skeleton
                 count={2}
@@ -102,9 +102,9 @@ function LeftNavPc({ newNavData, moreActive }) {
                 </a>
               ))
             )}
-          </TopList>
+          </STopList>
           {/* 分會場 */}
-          <MainList>
+          <SMainList>
             {newNavData.otherLink.length === 0 ? (
               <>
                 {Array.from({ length: 14 }).map((_, index) => (
@@ -132,10 +132,10 @@ function LeftNavPc({ newNavData, moreActive }) {
                   );
                 })
             )}
-          </MainList>
+          </SMainList>
 
           {/* 品牌區 */}
-          <SubList>
+          <SSubList>
             {newNavData.otherLink.length === 0 ? (
               <>
                 {Array.from({ length: 3 }).map((_, index) => (
@@ -161,10 +161,10 @@ function LeftNavPc({ newNavData, moreActive }) {
                   );
                 })
             )}
-          </SubList>
-        </ListWrap>
-      </ListContainer>
-    </NavContainer>
+          </SSubList>
+        </SListWrap>
+      </SListContainer>
+    </SNavContainer>
   );
 }
 

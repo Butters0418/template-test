@@ -1,7 +1,7 @@
 // 桌機左選
 import tw, { styled } from 'twin.macro';
 
-export const NavContainer = styled.div`
+export const SNavContainer = styled.div`
   ${tw`fixed left-0 z-50 hidden w-[120px] duration-300 text-left`}
   ${tw`md:(block)`}
   ${(props) =>
@@ -12,12 +12,12 @@ export const NavContainer = styled.div`
 `;
 
 // 收合按鈕
-export const Button = styled.button`
+export const SButton = styled.button`
   ${tw`pointer-events-auto h-10 w-10 rounded-lg bg-[rgba(0,0,0,0.7)] duration-200 hover:bg-opacity-80 flex justify-center items-center`}
 `;
 
 // 選單列表
-export const ListContainer = styled.div`
+export const SListContainer = styled.div`
   ${tw`w-full mt-2 text-sm duration-200`}
 
   ${(props) => (props.isOpen ? '' : tw`-translate-x-full`)}
@@ -37,19 +37,19 @@ export const ListContainer = styled.div`
 `;
 
 // 左選單貼紙
-export const Sticker = styled.a`
+export const SSticker = styled.a`
   ${tw`mb-0.5 block relative z-10`}
   >img {
     ${tw`object-cover duration-200 hover:brightness-105`}
   }
 `;
 
-export const ListWrap = styled.div`
+export const SListWrap = styled.div`
   ${tw`relative -mt-[20px] space-y-[6px] overflow-hidden rounded-[8px] px-[6px] pb-[6px] pt-[32px] bg-no-repeat`}
 `;
 
 // 左選上欄
-export const TopList = styled.div`
+export const STopList = styled.div`
   a {
     ${tw`relative flex flex-col h-[40px] items-center justify-center text-[18px] font-medium duration-200 text-leftNavActivityText`}
   }
@@ -66,7 +66,7 @@ export const TopList = styled.div`
 `;
 
 // 左選中欄
-export const MainList = styled.ul`
+export const SMainList = styled.ul`
   ${tw`grid-cols-2`}
   li {
     &:nth-of-type(2n + 1) {
@@ -80,7 +80,7 @@ export const MainList = styled.ul`
 `;
 
 // 左選下欄
-export const SubList = styled.ul`
+export const SSubList = styled.ul`
   ${tw`grid-cols-1`}
   li {
     &:nth-of-type(1) {
