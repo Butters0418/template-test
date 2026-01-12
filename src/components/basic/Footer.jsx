@@ -7,9 +7,9 @@ import {
 } from '../../assets/base';
 function Footer({ hasLeftNav }) {
   return (
-    <footer>
+    <footer className="relative z-20 bg-black">
       {/* 上 宣告 */}
-      <div className="relative z-20 bg-black px-2 py-5 text-white sm:px-5 sm:py-8 lg:p-14">
+      <div className="px-2 py-5 text-white sm:px-5 sm:py-8 lg:p-14">
         <div className="mx-auto max-w-[920px]">
           <div className="flex flex-col items-center justify-between px-3 lg:flex-row">
             <ul className="mb-5 hidden items-center justify-center md:flex lg:mb-0">
@@ -65,11 +65,7 @@ function Footer({ hasLeftNav }) {
         </div>
       </div>
       {/* 下 seo */}
-      <div
-        className={`bg-black px-2 pt-6 sm:px-5 sm:pt-10 md:p-10 ${
-          hasLeftNav ? 'pb-10' : 'pb-4'
-        }`}
-      ></div>
+      <div className={`md:pb-0 ${hasLeftNav ? 'pb-16' : 'pb-0'}`}></div>
     </footer>
   );
 }

@@ -17,6 +17,7 @@ build-zip
 !.vscode/extensions.json
 .idea
 download-images.js
+Rule.md
 .DS_Store
 *.suo
 *.ntvs*

@@ -12,7 +12,6 @@ import useWindowScroll from '../../../hooks/useWindowScroll';
 
 // images
 import { placeImg } from '../../../assets/base';
-import { nominifyLeftnavBg } from '../../../assets/layout';
 
 // style
 import {
